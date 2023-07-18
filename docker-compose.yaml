@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  mermaid-live-editor:
+    image: ghcr.io/mermaid-js/mermaid-live-editor
+    environment:
+      - MERMAID_KROKI_RENDERER_URL=http://kroki:7000/mermaid
+      - KROKI_EXCALIDRAW_HOST=excalidraw
+    ports:
+      - 8000:8080
+  kroki:
+    image: yuzutech/kroki
+    ports:
+      - 7000:8000
+  excalidraw:
+    image: yuzutech/kroki-excalidraw:latest
