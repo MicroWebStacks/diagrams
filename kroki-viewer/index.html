@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kroki Client</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <script src="https://unpkg.com/pako@1.0.10/dist/pako_deflate.min.js"></script>
+    <header>
+        <select id="diagramSelector">
+            <option value="mermaid">Mermaid</option>
+            <option value="blockdiag">BlockDiag</option>
+            <option value="seqdiag">SeqDiag</option>
+            <option value="actdiag">ActDiag</option>
+            <option value="nwdiag">NwDiag</option>
+            <!-- Add other diagram types as needed -->
+        </select>
+        <button id="generate">Generate Diagram</button>
+        <button id="save">Export SVG</button>
+    </header>
+    <main>
+        <textarea id="diagramSource" ></textarea>
+        <div id="svgcontainer"></div>
+    </main>
+    <script src="./libs/FileSaver.js"></script>
+    <script src="generate.js"></script>
+</body>
+</html>
