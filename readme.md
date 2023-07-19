@@ -8,7 +8,8 @@ testing different diagramming engines and tools
 ```shell
 docker-compose up
 ```
-* access mermaid live editor on http://localhost:8000
+* kroki server is accessible on http://localhost:7000
+* mermaid live editor on http://localhost:8000
 
 for kroki-viewer
 ```shell
@@ -16,4 +17,3 @@ cd kroki-viewer
 kroki-viewer> python -m http.server 9000
 ```
 * access kroki viewer on http://localhost:9000
-* kroki server is accessible on http://localhost:7000
