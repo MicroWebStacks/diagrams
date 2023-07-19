@@ -2,19 +2,18 @@ async function genAsync(){
     const diagramSelector = document.getElementById('diagramSelector').value;
     const diagramSource = document.getElementById('diagramSource').value;
     //console.log(diagramSource)
-    // Encode the diagram definition in Base64
+
     const data = new TextEncoder('utf-8').encode(diagramSource);
     const compressed = pako.deflate(data, { level: 9, to: 'string' }) 
     const result = btoa(compressed).replace(/\+/g, '-').replace(/\//g, '_')
-    // Generate the URL for the Kroki API
-    var url = 'https://kroki.io/' + diagramSelector + '/svg/' + result;
-    //var url = 'http://localhost:7000/' + diagramSelector + '/svg/' + result;
+
+    var url = baseURL + diagramSelector + '/svg/' + result;
     console.log(url)
     const response = await fetch(url);
     const svgContent = await response.text();    
     //console.log(svgContent)
     const svgContainer = document.getElementById('svgcontainer');
-    //remove old
+
     const old_svg = document.getElementsByTagName("svg")
     //console.log(old_svg)
     if(old_svg.length){
