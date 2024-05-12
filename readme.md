@@ -1,3 +1,7 @@
+# Moved
+This repo is archived and development moved to https://github.com/MicroWebStacks/applications-services/tree/main/diagrams
+
+# Overview
 testing different diagramming engines and tools
 
 * mermaid : https://www.mermaidchart.com/
